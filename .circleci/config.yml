@@ -30,8 +30,8 @@ jobs:
             sudo tar -C /usr/local/bin -xvf soci-snapshotter-${version}-linux-amd64.tar.gz
             sudo soci --help
 
-            nerdctl run -it --rm alpine
-            nerdctl ps
+            sudo nerdctl run -it --rm alpine
+            sudo nerdctl ps
 
 workflows:
   version: 2
