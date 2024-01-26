@@ -32,6 +32,15 @@ jobs:
 
             sudo nerdctl run -it --rm alpine
             sudo nerdctl ps
+            name = "master"
+            age  = "18"
+
+            if [[ name = 'master' ]] || [[ age = '18' ]]
+            then
+              echo "aws ecr get-login-password | docker login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.<<parameters.amazon_host>>"
+              echo "docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.<<parameters.amazon_host>>/hivestack/notifications-api:${COMMIT_TAG}-<< parameters.architecture >>"
+              echo "docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.<<parameters.amazon_host>>/hivestack/notifications-api:${BRANCH_TAG}-<< parameters.architecture >>"
+            fi
 
 workflows:
   version: 2
