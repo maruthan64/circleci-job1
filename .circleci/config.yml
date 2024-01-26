@@ -18,7 +18,8 @@ jobs:
             ls -al
             #sudo mv containerd.service /usr/lib/systemd/system/
             #sudo systemctl daemon-reload
-            sudo systemctl status containerd
+            
+            #sudo systemctl status containerd
         
             wget https://github.com/containerd/nerdctl/releases/download/v1.7.2/nerdctl-full-1.7.2-linux-amd64.tar.gz"
             sudo tar Czxvf /usr/local nerdctl-full-1.7.2-linux-amd64.tar.gz
