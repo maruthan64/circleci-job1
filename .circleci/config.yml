@@ -37,9 +37,9 @@ jobs:
 
             if [[ name = 'master' ]] || [[ age = '18' ]]
             then
-              echo "aws ecr get-login-password | docker login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.<<amazon_host>>"
-              echo "docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.<<amazon_host>>/hivestack/notifications-api:${COMMIT_TAG}-<< architecture >>"
-              echo "docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.<<amazon_host>>/hivestack/notifications-api:${BRANCH_TAG}-<< architecture >>"
+              echo "aws ecr get-login-password"
+              echo "docker push"
+              echo "docker"
             fi
 
 workflows:
