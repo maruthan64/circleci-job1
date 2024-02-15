@@ -39,23 +39,19 @@ jobs:
             fi
       - slack/notify:
           debug: true
-          step_name: "Fail template with mentions"
           template: basic_fail_1
           mentions: "@orbs"
           event: always
       - slack/notify:
           debug: true
-          step_name: "Success template with mentions"
           template: basic_success_1
           event: always
       - slack/notify:
           debug: true
-          step_name: "Success tagged template"
           template: success_tagged_deploy_1
           event: always
       - slack/notify:
           debug: true
-          step_name: "Basic on hold template"
           template: basic_on_hold_1
           event: always        
 
