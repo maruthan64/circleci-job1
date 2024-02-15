@@ -38,20 +38,16 @@ jobs:
               echo "docker"
             fi
       - slack/notify:
-          debug: true
           template: basic_fail_1
           mentions: "@orbs"
           event: always
       - slack/notify:
-          debug: true
           template: basic_success_1
           event: always
       - slack/notify:
-          debug: true
           template: success_tagged_deploy_1
           event: always
       - slack/notify:
-          debug: true
           template: basic_on_hold_1
           event: always        
 
